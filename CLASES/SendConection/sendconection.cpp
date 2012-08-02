@@ -21,7 +21,7 @@ SendConection::sendData(QString filename) //Hay que comprobar si está bien!
 {
        Data data;
        QFile *file;
-       file = new QFile("Nombre_del_archivo_punto_formato");
+       file = new QFile(filename);
        file->open(QIODevice::ReadOnly);
        data = file->readAll();
        socket->write(data); 
