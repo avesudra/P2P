@@ -16,3 +16,15 @@ SendConection::sendInformation(QString filename)//Esta la estoy haciendo ahora.
    QFile pet("information.pet");
    SendConection::connectToHost();
 }
+
+SendConection::sendData(QString filename) //Hay que comprobar si está bien!
+{
+       Data data;
+       QFile *file;
+       file = new QFile("Nombre_del_archivo_punto_formato");
+       file->open(QIODevice::ReadOnly);
+       data = file->readAll();
+       socket->write(data); 
+       file->close();
+       delete[] file;      
+}
