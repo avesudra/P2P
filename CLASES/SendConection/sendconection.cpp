@@ -17,7 +17,7 @@ SendConection::sendInformation(QString filename)//Esta la estoy haciendo ahora.
    SendConection::connectToHost();
 }
 
-SendConection::sendData(QString filename) //Hay que comprobar si está bien!
+SendConection::sendData(QString filename) //Sin terminar!
 {
        Data data;
        QFile *file;
